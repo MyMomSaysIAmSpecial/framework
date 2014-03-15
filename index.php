@@ -6,3 +6,7 @@
 	use Symfony\Component\HttpFoundation\Response;
 
 	$request = Request::createFromGlobals();
+
+	$input = $request->get('var');
+	$response = new Response('Var is: ' . $input);
+	$response->send();
